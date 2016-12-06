@@ -1,0 +1,150 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.solucionesdigitales.WindowsFragment">
+
+    <!-- TODO: Update blank fragment layout-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/win1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:onClick="win"
+                android:src="@drawable/prob1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Desactiva programas en el arranque"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="En Windows 10 es mucho más fácil de desactivar los programas que se ejecutan al inicio que en anteriores versiones de Windows."
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/winp2"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:onClick="win"
+                android:src="@drawable/winp2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="El ordenador no arranca"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Se reinicia de forma inesperada, no arranca o muestra la famosa pantalla azul"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/win3"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:onClick="win"
+                android:src="@drawable/winp3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Windows 10 muestra errores en las actualizaciones."
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tras el proceso de instalación o de actualización a Windows 10, algunos componentes del sistema pueden no haberse instalado correctamente y mostrar diversos errores que hacen imposible su uso."
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/win4"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:onClick="win"
+                android:src="@drawable/winp4"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="El procesador o la memoria RAM se colapsan"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="En las primeras versiones de Windows 10 muchos usuarios reportaron una carga excesiva sobre el procesador y la RAM que hacía que trabajara más de lo habitual se colapsaban."
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/win5"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:onClick="win"
+                android:scaleType="centerCrop"
+                android:src="@drawable/winp5"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Windows 10 no despierta de la hibernación"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El sistema de hibernación de Windows 10 es una excelente alternativa para ahorrar tiempo y batería si no va a utilizar tu equipo durante un cierto tiempo"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

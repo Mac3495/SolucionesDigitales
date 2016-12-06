@@ -1,0 +1,143 @@
+<resources>
+    <string name="app_name">Soluciones Digitales</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_segunda">SegundaActivity</string>
+    <string name="win1">Haz clic con el botón derecho del ratón sobre la barra de tareas y elige la opción “Administrador de tareas”
+Accede a la pestaña “Inicio” y allí se listan todos los programas que se inician junto a Windows 10.
+Procura mantener activos solo los que son imprescindibles, como los que hemos mencionado antes (Antivirus, controladores, backup, etc.). Para desactivarlos, selecciona uno de ellos y haz clic sobre el botón “Deshabilitar”. Deshabilitar estos programas no implica que dejen de funcionar, pero solo lo harán cuando los inicies tú expresamente y no de forma automática como hasta ahora.
+Si quieres volver a activar alguno de ellos, vuelve a seleccionarlo y se activará el mismo botón, pero con el mensaje “Habilitar”.</string>
+    <string name="win2">En ese caso, te será muy útil el soporte de instalación de Windows 10 que has creado en el primer paso de este tutorial.
+
+Inicia tu equipo desde ese soporte en lugar de hacerlo desde tu disco duro como es habitual, pero en esta ocasión, elige la opción “Reparar equipo”.
+En la pantalla “Elegir una opción”, haz clic en “Solucionar problemas”. Después, sobre “Opciones avanzadas”, “Configuración de inicio” y, por último, sobre el botón “Reiniciar”.
+Una vez se reinicie tu equipo, pulsa la tecla F5 para indicar que quieres reiniciar tu PC en modo seguro con funciones de red. Si con esto no consigues que el equipo se inicie, inténtalo usando el arranque seguro sin funciones de red (tecla F4) o con vídeo en baja resolución (tecla F3).
+    Despliega el apartado Adaptadores de pantalla y, si existen dos entradas, deshabilita uno de ellos haciendo clic sobre él con el botón derecho del ratón y elige “Deshabilitar”.
+Si solo aparece uno, selecciónalo, haz clic con el botón derecho del ratón y accede a “Propiedades” y elige la opción “Revertir al controlador anterior”.
+También puedes optar por desinstalar totalmente el controlador para volver a instalarlo de nuevo. En ocasiones, esto soluciona el problema y mantiene el controlador actualizado.
+Cuando termines, reinicia el equipo para aplicar los cambios y deja que se inicie con normalidad.
+    </string>
+    <string name="win3">Comienza abriendo el Explorador de archivos y accede a la siguiente ruta: C:/Windows/SoftwareDistribution/Download.
+Después, elimina todos los archivos y carpetas que contenga esa carpeta.
+Ahora, pulsa la combinación de teclas Windows + X y elige la opción Símbolo del sistema (administrador). Una vez iniciada, escribe los siguientes comandos y pulsa Intro tras cada uno de ellos:
+net stop wuauserv
+net stop bits
+rd /s /q %windir%\SoftwareDistribution\Download
+net start wuauserv
+net start bits
+wuauclt.exe /updatenow
+Tras esto, ya puedes volver a intentar la actualización de tu equipo con normalidad.</string>
+    <string name="win4">
+        Esto provocaba que el ordenador funcionara más lento y suponía un peligroso aumento de la temperatura de la CPU y RAM. Tras algunas actualizaciones, la mayoría de afectados solucionaron su problema.
+Ahora ya no es un problema tan habitual como antes, pero todavía puede afectar a nuevos usuarios que todavía no han instalado las actualizaciones adecuadas.
+Según Microsoft, este problema está relacionado con el sistema de notificaciones de Windows 10 que está controlado por el servicio stokrnl.exe y por Runtime Broker.
+Para solucionarlo, basta con acceder al panel Configuración desde el menú Inicio.
+Accede al apartado “Sistema” y haz clic sobre “Notificaciones y Acciones”.
+En el cuadro principal, busca la opción “Obtener trucos, consejos y sugerencias mientras usas Windows” y desactívala.
+Con esto, y manteniendo el sistema perfectamente actualizado, debería desaparecer este problema.
+    </string>
+    <string name="win5">
+        Para retomarlo más tarde en el mismo punto en el que lo dejaste y de forma casi instantánea con solo mover el ratón o pulsar una tecla.
+No obstante, el hardware de algunos equipos antiguos puede tener problemas para despertar a sus ordenadores después de utilizar este sistema de apagado, obligando al usuario a pulsar el botón de encendido y perdiendo todo lo que no se había guardado.
+Como decimos, este problema está directamente relacionado con el hardware de los equipos, por lo que algunos usuarios lo han solucionado actualizando la BIOS del ordenador y los controladores de la placa base, aunque esto no siempre soluciona el problema.
+Para evitarlo, la mejor solución es desactivar la hibernación en Windows 10 evitando que entre en suspensión automáticamente.
+Para hacerlo, pulsa la tecla Windows y escribe “Editar plan de energía” para acceder a esa configuración.
+En la casilla “Poner el equipo en estado de suspensión” elige la opción “Nunca”.
+    </string>
+    <string name="lin1">
+        Lo primero que vamos a hacer para solucionar los problemas de arranque es arrancar el sistema operativo a través de un live CD. Una vez entremos dentro, vamos a ejecutar una terminal y a ejecutar la utilidad fdisk con el siguiente comando.
+1
+fdisk -l
+Este comando muestra todas las particiones que tenemos en nuestros discos duros y por supuesto nos va a mostrar la partición en la cual tenemos instalado el sistema operativo.
+Lo normal es que esté instalada en la partición sda1, es decir, en la primera partición del disco duro que actúa como maestro.
+Para solucionar el problema de arranque, vamos a utilizar el comando fsck, que es un programa que reconoce todos los errores de partición y los arregla automáticamente. Para ejecutarlo en nuestra partición primaria, ejecutaremos este comando.
+1
+sudo fsck /dev/sda1
+Lo normal en estos casos es que al reiniciar el ordenador y al arrancar normalmente, ya todo haya vuelto a la normalidad y el sistema operativo arranque normalmente.
+En el caso de no funcionar correctamente, podría ser que los problemas fueran de hardware, lo cual sin duda es una mala noticia para tu disco duro.
+Al menos este tutorial es capaz de solucionar la mayoría de los problemas de arranque relacionados con problemas de software, como por ejemplo una mala instalación de actualizaciones o problemas del sistema de archivos.
+    </string>
+    <string name="lin2">
+        1) Si tienes una distro basada en Ubuntu (en esta guía los ejemplos serán para distros basadas en Ubuntu), descárgate el kernel de http://kernel.ubuntu.com/~kernel-ppa/mainline/, escogiendo el último kernel que no tenga en su nombre rcx, pues estos están en testing (si te atreves con estos puedes, pero creo que no es necesario). Al pinchar verás una página como esta
+        y tendrás que descargarte 3 archivos, según quieras i386 o amd64. Si tu distro es amd64 te descargas:
+1) linux-image....amd64.deb
+2) linux-headers...all.deb
+3) linux-headers...amd64.deb
+el linux-headers...all.deb lo descargan tanto los amd como los i386.
+2) En la carpeta de descarga: sudo dpkg -i linux*.deb
+3) Update al grub para que nos cargue el nuevo kernel tras reiniciar: sudo update-grub
+Y reiniciamos. Ahora no solo debería ir mejor el wifi si no en realidad todo el equipo, pues el nuevo kernel nos proporcionará un mejor rendimiento. En Ubuntu Mate (como en Ubuntu) el kernel oficial está en el 3.13, mientras que el que hemos instalado en el ejemplo es el 3.19.
+    </string>
+    <string name="lin3">
+        1. Error 1068
+El error 1068 seguramente sea el más frecuente de todos. El mensaje concreto de error es «Error 1068: The Dependency Group Failed to Start». Podemos resolverlo abriendo el Administrador de control de servicios y comprobando qué servicio ha fallado en el arranque. Los siguientes servicios deben estar en ejecución:
+SQL (Bkupexec)
+BE Remote Agent (Agente remoto de Backup Exec)
+BE Device and Media (Dispositivo y medio de Backup Exec)
+BE Server Service (Servicio de servidor de Backup Exec)
+BE Job Engine Service (Servicio de motor de trabajos de Backup Exec)
+BE Agent Browser (Explorador de agente de Backup Exec)
+Pueden ser precisos servicios adicionales en función de cómo se instaló Backup Exec. A veces podemos forzar el inicio de un servicio haciendo clic con el botón secundario sobre él y eligiendo el comando Inicio del menú contextual. Si esto no funciona, revise los registros de la aplicación y del sistema en el Visor de eventos. Las entradas de registro deberían ser capaces de darle una pista respecto de la causa del problema. En la mayor parte de los casos el problema es relativo a una cuestión de permisos de la cuenta que está intentando ejecutar el servicio.
+    </string>
+    <string name="lin4">
+        Tal programa no abre, no se porque.
+Me tira un cartel raro con codigo de programacion.
+Se me cierra solo el programa.
+No se cambiar el aspecto de tal cosa.
+Algunas recomendaciones:
+Usen el log. Linux y la mayoria de los programas guardan un log(un archivo con todos los errores). Por lo general se encuentran en la carpeta /var/log/.  Por ejemplo si es un error con php seguramente estara en php.log o apache.log o en http/algo.log.
+Solo deben abrir el archivo y fijarse cual es el ultimo mensaje y pegar eso en google.
+Copiar el error. Esto es super simple, cuando aparezca un error no cierren simplemente el cartel de advertencia. Copien lo que dice y busquenlo en google. Se sorprenderan con lo rapido que aprender a solucionar problemas y errores de esta manera.
+Ejecuten el programa desde la consola. Muchas veces, un programa no se abre, o tiene un compartamiento extraño y fuera de lo normal, mientras que desconocemos que lo causa.
+En estos casos lo mejor es abrir una consola y ejecutar de esa manera el programa. Alli se veran claramente los errores y por supuesto es solo cuestion de copiar y pegar en google.
+Felicitaciones! Se han convertido en expertos en linux!...no es cierto, pero estan un poco mas cerca de conocer como funciona su pc, sus programas y con el paso del tiempo obtendran un sistema que ya no les dara ningun problema, un sistema muy estable.
+    </string>
+    <string name="lin5">
+        La propia gente detrás del desarrollo de elementary OS adelanta que esta primera entrega de la tienda de aplicaciones, llamada simplemente AppCenter, no cuenta con todas las características que les gustaría implementar pero que tal y como está basta y sobra para instalar y desinstalar aplicaciones de una forma sencilla. «Incluye todas las características básicas necesarias para otorgar una buena experiencia de usuario, como la capacidad de instalar y remover aplicaciones, mostrar capturas y hacer búsquedas simples», asegura el equipo de la distribución en el anuncio, agregando: «La interfaz es muy rápida y fácil de navegar gracias al excelente diseño y la tecnología sobre la que la hemos construido».
+El núcleo y pieza más importante de AppCenter es PackageKit, los desarrolladores de elementary OS decidieron usar PackageKit porque no desean que la herramienta sea dependiente de ninguna distribución. «[PackageKit] nos permite desarrollar AppCenter de manera que es independiente de cualquier distribución, lo que significa que puede ser usada para instalar y desinstalar aplicaciones en cualquier sistema operativo basado en Linux», afirman.
+    </string>
+    <string name="and1">
+        En general el sistema funciona de forma correcta, pero algunas funciones tan sencillas como imprimir se resisten en algunas ocasiones por problemas de configuración. En cualquier caso, aquí tienes tres comunes fallos, en mi caso, de OS X Lion y como los puedes solucionar sin volverte loco.
+Reiniciar el sistema de impresión. En el caso de contar con una impresora en red compartida entre más de un usuario, seguro que en más de una ocasión te muestra un mensaje de error relacionado con la conexión de la misma. Mi forma de solucionarlo fue reiniciando el sistema de impresión y configurando de nuevo la impresora. Para ello accede a las Preferencias del Sistema, apartado Impresión y Escaneado, haz click derecho sobre el listado de elementos y selecciona la opción: “reinicializar sistema de impresión“.
+Inicia el sistema en modo seguro. Si tienes problemas con alguna extensión del sistema, no soportada en Lion, la forma más sencilla de detectarlo es iniciando en modo seguro el sistema, para ello mantén pulsada la tecla shift durante el arranque del mismo.
+Dichosa interfaz gráfica de Lion. Por alguna extraña razón difícil de entender, en algunas ocasiones después de desconectar un monitor externo mi equipo se niega a restaurar el fondo de pantalla y algunos elementos de la interfaz. Lo más sencillo es reiniciar parte del sistema gráfico, lo más simple es acceder a la terminal y usar el comando: “Killall Dock“.
+    </string>
+    <string name="and2">
+        Esto puede pasarte en cualquier momento y OS X El Capitan no tiene mucha culpa, pero nos puede ayudar a solucionarlo apretando una combinación de teclas “Comando + Opción + ESC”, lo que nos llevara al panel de “Forzar Salida de Aplicaciones” dónde podremos cerrar sin problemas la app que nos da problemas.
+    </string>
+    <string name="and3">
+        Lo primero que hay que hacer es descubrir al culpable. El programa se quedara prácticamente congelado o tardara mucho en realizar ciertas acciones. Para comprobar que realmente esta haciendo uso de mucha CPU o RAM, tenemos que ir al Monitor de Actividad de Mac OS X (Aplicaciones > Utilidades > Monitor de Actividad).
+        Aquí veremos que procesos están consumiendo la mayor parte de la memoria y la CPU del Mac. En mi caso era la app de WordPress, que me funcionaba perfectamente en un MacBook Pro que también uso habitualmente. ¿Y ahora que podemos hacer? Sencillo, hay que borrar la app del Mac.
+        Te vas a la carpeta Aplicaciones del Mac, abres Appcleaner y luego arrastras el programa que da problemas (el archivo .app) hasta la ventana de Appcleaner. En pocos segundos aparecerán todos los archivos que ha creado la app en Mac OS X. Le das al botón de borrar (Delete) y todo solucionado.
+    </string>
+    <string name="and4">
+        Abrimos una venta del Terminal en nuestro Mac y ponemos lo siguiente:
+cd Desktop/
+touch Purge
+pico Purge
+Hemos ido al directorio Desktop, hemos creado un archivo llamado Purge y lo editamos.
+Ponemos lo siguiente dentro del archivo “Purge”:
+#!/bin/sh purge
+El comando purge le dice al Mac que tiene que purgar la memoria RAM. Presionamos Control + O para guardar el archivo en el escritorio y Control + X para salir del editor.
+De vuelta en el Terminal cambiamos los permisos del archivo para que sea accesible:
+chmod 755 Purge
+Desde este momento cada vez que abras este archivo situado en el escritorio del Mac, automáticamente se procederá a liberar Memoria RAM del sistema sin ningún tipo de aplicación.
+    </string>
+    <string name="and5">Apple por fin nos ha puesto las cosas fáciles y no hay que hacer cosas muy complicadas para crear un disco USB ejecutable que nos permite instalar de manera limpia OS X El Capitan. Estos son los pasos que hay que seguir.
+
+Descarga el instalador de OS X de la Mac App Store. Cierra el instalador si se abre de manera automática una vez descargado. El instalador estará en la carpeta Aplicaciones.
+Monta la unidad flash USB y con la Utilidad de discos del Mac dale formato HFS+ (partición tipo GUID). Ponle como nombre MIUSB.
+Abre la app Terminal, que se encuentra en la carpeta Aplicaciones > Utilidades
+Ejecutamos el siguiente comando: sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia –volume /Volumes/MIUSB –applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app –nointeraction
+En unos minutos tendremos el instalador disponible en nuestro pendrive USB
+Después de cambiar la memoria RAM y colocar el nuevo disco duro SSD reiniciamos el Macbook Pro y mantenemos pulsada la tecla ALT para que aparezca el selector de arranque (elegimos MIUSB)
+Instalamos OS X El Capitan en el nuevo disco duro SSD.</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>

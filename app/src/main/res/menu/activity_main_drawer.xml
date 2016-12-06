@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/inicio"
+            android:icon="@drawable/home"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/windows"
+            android:icon="@drawable/windows"
+            android:title="Windows" />
+        <item
+            android:id="@+id/linux"
+            android:icon="@drawable/linux"
+            android:title="Linux" />
+
+        <item
+            android:id="@+id/android"
+            android:icon="@drawable/apple"
+            android:title="OSX" />
+
+    </group>
+
+    <item android:title="Comunicate">
+        <menu>
+            <item
+                android:id="@+id/ubicacion"
+                android:icon="@drawable/placeholder"
+                android:title="Ubicación" />
+            <item
+                android:id="@+id/contacto"
+                android:icon="@drawable/contact"
+                android:title="Contactanos" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.android.solucionesdigitales.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/prob1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:onClick="inicio"
+                android:src="@drawable/winp4"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="El procesador o la memoria RAM se colapsan"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="En las primeras versiones de Windows 10 muchos usuarios reportaron una carga excesiva sobre el procesador y la RAM que hacía que trabajara más de lo habitual se colapsaban."
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/prob2"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:onClick="inicio"
+                android:src="@drawable/linp4"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Como encontrar errores en Linux?"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Es relativamente facil solucionar los problemas con los que un usuario o uno mismo se encuetra en linux. "
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/prob3"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:onClick="inicio"
+                android:scaleType="centerCrop"
+                android:src="@drawable/appp5"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Como crear un USB ejecutable con OSX"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Tienes un iMac o un Macbook Pro ya con unos cuantos años y quieres darle nueva vida instalando un nuevo disco duro solido SSD? Eso es lo que le ha pasado a mi pobre Macbook Pro "
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

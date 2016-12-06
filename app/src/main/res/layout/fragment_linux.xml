@@ -1,0 +1,150 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.solucionesdigitales.LinuxFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/lin1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:onClick="lin"
+                android:src="@drawable/linp1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Problemas de arranque en Ubuntu "
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aunque estas cosas no suelen ser muy habituales en sistemas operativos de Linux, los problemas de arranque siguen estando presentes en sistemas operativos Ubuntu"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/lin2"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:onClick="lin"
+                android:src="@drawable/linp2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Solución definitiva a los problemas de Wifi en Linux"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Todos los que hayan emigrado a Linux sabrán de lo que hablo: el gran talón de Aquiles de Linux es, sin género de dudas, el Wifi."
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/lin3"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:onClick="lin"
+                android:src="@drawable/linp3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Fallos comunes de Backup Exec"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Backup Exec de Symantec lleva entre nosotros desde principios de los 90. En todo este tiempo se ha ganado una gran..."
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/lin4"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:onClick="lin"
+                android:src="@drawable/linp4"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Como encontrar errores en Linux?"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Es relativamente facil solucionar los problemas con los que un usuario o uno mismo se encuetra en linux. "
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/lin5"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:onClick="lin"
+                android:scaleType="centerCrop"
+                android:src="@drawable/linp5"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="App Center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Las tiendas de aplicaciones llegaron para quedarse, los usuarios de Ubuntu ya tienen la suya y ahora también la tienen"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
